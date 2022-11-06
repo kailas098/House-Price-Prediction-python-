@@ -18,8 +18,7 @@ data_frame.grid(row = 0, column = 0,padx=20, pady=20)
 
 def button_command():
     global result
-    result=""
-    result += str(hpp.HousePricePrediction(float(age_entry.get()),float(no_of_B_rooms_entry.get()),float(no_of_B_rooms_entry.get()),float(population_entry.get()),float(current_year_entry.get())))
+    result = str(hpp.HousePricePrediction(float(age_entry.get()),float(no_of_B_rooms_entry.get()),float(no_of_B_rooms_entry.get()),float(population_entry.get()),float(current_year_entry.get())))
     output.config(text=result)
     hpp.plot_graph(float(age_entry.get()),float(no_of_B_rooms_entry.get()),float(no_of_B_rooms_entry.get()),float(population_entry.get()),float(current_year_entry.get()))
     return None
