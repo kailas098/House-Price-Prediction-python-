@@ -13,12 +13,12 @@
 5) joblib
 6) numpy
 
-#HousePricePredictionApp.py
+# HousePricePredictionApp.py
 
 1) joblib
 2) matplotlib
 
-#Interface.py
+# interface.py
 
 1) tkinter
 
