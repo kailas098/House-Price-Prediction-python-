@@ -3,24 +3,26 @@ import HousePricePredictorApp as hpp
 
 root =Tk()
 
-#root.geometry('1024x720')
 root.title("Residential Property Price prediction System")
 
 result=""
 
 # frame within root
+
 frame = Frame(root)
 frame.pack()
 
 # property-detail frame within frame
+
 data_frame = LabelFrame(frame, text = "Property details")
 data_frame.grid(row = 0, column = 0,padx=20, pady=20)
 
 def button_command():
     global result
-    result = str(hpp.HousePricePrediction(float(age_entry.get()),float(no_of_B_rooms_entry.get()),float(no_of_B_rooms_entry.get()),float(population_entry.get()),float(current_year_entry.get())))
+    result = str(hpp.HousePricePrediction(float(age_entry.get()),float(no_of_B_rooms_entry.get()),float(no_of_B_rooms_entry.get()),float(population_entry.get())))
     output.config(text=result)
     hpp.plot_graph(float(age_entry.get()),float(no_of_B_rooms_entry.get()),float(no_of_B_rooms_entry.get()),float(population_entry.get()),float(current_year_entry.get()))
+    
     return None
 
 def clear_command():
@@ -32,7 +34,9 @@ def clear_command():
 
     return None
 
-age = Label(data_frame, text="age")
+# Labels in property detail frame
+
+age = Label(data_frame, text="Building age")
 age.grid(row=0,column=0)
 
 no_of_rooms = Label(data_frame, text="No. of rooms")
@@ -47,7 +51,8 @@ population.grid(row=3,column=0)
 current_year = Label(data_frame,text="Current year")
 current_year.grid(row=4,column=0)
 
-# entry
+# Entry in property detail frame
+
 age_entry = Entry(data_frame, width = 20)
 age_entry.grid(row=0,column=1)
 
@@ -63,12 +68,12 @@ population_entry.grid(row=3,column=1)
 current_year_entry = Entry(data_frame, width = 20)
 current_year_entry.grid(row=4,column=1)
 
-#buttons in property-details frame
+#Buttons in property-details frame
 
 Button(data_frame, text="enter",width=16 , command=button_command).grid(row=5,column=0)
 Button(data_frame, text="clear",width=16 , command=clear_command).grid(row=5,column=1)
 
-#output area
+#Output area
 output_text = Label(data_frame, text="Estimated price($):",height=2,bg="#FFFEE4",width=20)
 output_text.grid(row=6, column=0,pady=10)
 
