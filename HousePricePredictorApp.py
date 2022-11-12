@@ -2,12 +2,15 @@ import joblib
 import matplotlib.pyplot as mp
 import caster as cs
 
+# function to predict property price
 
-def HousePricePrediction(age, no_of_rooms,no_of_Brooms,area_population,cuerrnt_year):
+def HousePricePrediction(age, no_of_rooms,no_of_Brooms,area_population):
     model = joblib.load('House_price_predictor.joblib')
 
     pred = model.predict([[600,age,no_of_rooms,no_of_Brooms,area_population]])
     return(cs.convert_val(pred))
+
+# function to plot graph
 
 def plot_graph(age, no_of_rooms,no_of_Brooms,area_population,cuerrnt_year):
     price=[]
