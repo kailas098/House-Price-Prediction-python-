@@ -22,7 +22,7 @@
 
 1) tkinter
 
-## to install them just type pip install '<module-name>' in the terminal
+## to install them just type pip install 'module-name' in the terminal
 
 eg (to install seaborn):
 ![image](https://user-images.githubusercontent.com/42032085/201480099-7db75489-8993-49ee-944f-0a34187e6942.png)
